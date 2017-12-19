@@ -48,7 +48,7 @@
   transform-style: preserve-3d;
   transform-origin: right;
   position: absolute;
-  z-index: -0;
+  z-index: 0;
 }
 .animated-icon .book-cover::after {
   content: 'The Little Prince';
@@ -184,4 +184,13 @@ background-size: 100% 10px;
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: orange }
+}
+
+@media screen and (max-width: 480px) {
+    .typewriter h1 {
+       font-size: 12px;
+    }
+    #readbutton {
+      float: none;
+    }
 }
