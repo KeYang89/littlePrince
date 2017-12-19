@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+#world {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+#bookwrap{
+	height:300px;
+	overflow:hidden;
+	position: absolute;
+	z-index: 9999;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	padding-top:20px;
+}
+#book, #readbutton {
+	z-index: 9999;
+}
+#readbutton {
+	float: right;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.animated-icon {
+  width: 15em;
+  height: 15em;
+  margin: 3em auto 0;
+  padding: 4em 2em;
+  position: relative;
+}
+.animated-icon .book-cover, .animated-icon .book-cover::after {
+  background: rgba(200,100,40,0.5);
+  border: 0.5em solid rgba(200,140,40,1);
+  height: 7em;
+  border-radius: 5%;
+  width: 5.5em;
+  transform: rotateY(10deg) skewY(5deg);
+  transform-style: preserve-3d;
+  transform-origin: right;
+  position: absolute;
+  z-index: -0;
+}
+.animated-icon .book-cover::after {
+  content: 'The Little Prince';
+  position: absolute;
+  left: 100%;
+  top: -1.45em;
+  transform: rotateY(0deg) skewY(-10deg);
+}
+.animated-icon .page {
+   transform-origin: right;
+   position: absolute;
+   top: 4em;
+   left: 2em;
+   height: 7em;
+   border: 2px solid white;
+	background: linear-gradient(
+	  to bottom,
+	  #d7d7d7,
+	  #d7d7d7 50%,
+	  white 50%,
+	  white
+	);
+background-size: 100% 10px;
+   z-index: 10;
+   width: 5.5em;
+   transform: rotateY(0deg) skewY(15deg) scaleX(0.8);
+   transform-style: preserve-3d;
+}
+.animated-icon .page::before {
+    content: "\2665";
+    position: absolute;
+    top: -.25em;
+    left: -.25em;
+    transform-origin: right;
+    transform: rotateY(180deg) skewY(20deg) scaleX(0.95);
+    transform-style: preserve-3d;
+    border-top: 34px solid white;
+    border:14px solid white;
+	background: linear-gradient(
+	  to bottom,
+	  #d3d3d3,
+	  #d3d3d3 50%,
+	  white 50%,
+	  white
+	);
+background-size: 100% 10px;
+    z-index: 100;
+    height: 7em;
+    width: 5.5em;
+    animation: turn 2s ease-in-out infinite;
+}
+.animated-icon .page::after {
+    content: "\2665";
+    position: absolute;
+    top: -.25em;
+    left: -.25em;
+    transform-origin: right;
+    transform: rotateY(180deg) skewY(25deg) scaleX(0.95);
+    transform-style: preserve-3d;
+    border-top: 34px solid #f7f7f7;
+    border: 14px solid #f7f7f7;
+    background: linear-gradient(
+	  to bottom,
+	  #d3d3d3 ,
+	  #d3d3d3 50%,
+	  #f7f7f7 50%,
+	  #f7f7f7
+	);
+background-size: 100% 10px;
+    z-index: 100;
+    height: 7em;
+    width: 5.5em;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    transform: rotateY(180deg) skewY(25deg) scaleX(0.95);
+  }
+  40% {
+    transform: rotateY(0deg) skewY(0) scaleX(0.95);
+  }
+  100% {
+    transform: rotateY(0deg) skewY(0) scaleX(0.95);
+  }
+}
+@keyframes turn {
+  0% {
+    transform: rotateY(180deg) skewY(25deg) scaleX(0.95);
+
+  }
+  40% {
+    transform: rotateY(0deg) skewY(0) scaleX(0.95);
+  }
+  100% {
+    transform: rotateY(0deg) skewY(0) scaleX(0.95);
+
+  }
+}
+#readbutton span {
+	width: 15em;
+    position: absolute;
+    z-index: 9999;
+    margin: 5em 0 0 -8em;
+    padding: 4em 2em;
+    font-weight: 800;
+
+}
