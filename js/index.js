@@ -13,8 +13,6 @@ var Colors = {
 	lightgreen:0x629265,
 };
 
-
-
 var scene, camera, fieldOfView, aspectRatio, nearPlane, farPlane, HEIGHT, WIDTH, renderer, container;
 var particlesPool = [];
 var particlesInUse = [];
